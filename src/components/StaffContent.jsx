@@ -30,7 +30,7 @@ const mockData = [
         ],
         designation: 'Assistant Teacher',
         schedule: {
-            days: ['Mon', 'Wed', 'Fri'],
+            days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
             customSchedule: {
                 day: 'Wednesday',
                 time: '07:30 AM - 5:30 PM'
@@ -43,11 +43,11 @@ const mockData = [
         name: 'Natasha ',
         avatar: 'https://i.pravatar.cc/150?u=natasha',
         classrooms: [
-            { name: '2-Yellow-C', code: 'YC', additions: ['1'] }
+            { name: '2-Orange-C', code: 'YC', additions: ['1'] }
         ],
-        designation: 'Assistant Teacher',
+        designation: 'Direactor',
         schedule: {
-            days: ['Mon', 'Wed', 'Fri'],
+            days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
             customSchedule: {
                 day: 'Wednesday',
                 time: '07:30 AM - 5:30 PM'
@@ -64,7 +64,24 @@ const mockData = [
         ],
         designation: 'Lead Teacher',
         schedule: {
-            days: ['Mon', 'Wed', 'Fri'],
+            days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+            customSchedule: {
+                day: 'Wednesday',
+                time: '07:30 AM - 5:30 PM'
+            }
+        },
+        phoneNumber: '(986) 027-1627'
+    },
+    {
+        id: '5',
+        name: 'Eddie Barnes',
+        avatar: 'https://i.pravatar.cc/150',
+        classrooms: [
+            { name: '2-Orange-C', code: 'YC', additions: ['1'] }
+        ],
+        designation: 'Lead Teacher',
+        schedule: {
+            days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
             customSchedule: {
                 day: 'Wednesday',
                 time: '07:30 AM - 5:30 PM'
