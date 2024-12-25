@@ -6,21 +6,21 @@ export const Header = () => {
 
 
     return (
-        <div>
+        <div className=''>
             <div>
-                <AntHeader className="bg-white px-4 flex items-center justify-end gap-4 border-b border-gray-200">
-                    <div className='flex items-center justify-between'>
-                        <div className='flex gap-2 items-center pr-28 '>
+                <AntHeader className="bg-white flex items-center gap-4 border-b border-gray-200">
+                    <div className='flex w-full items-center justify-between'>
+                        <div className='flex gap-2 items-center pr-[10rem] '>
                             <p className='text-lg font-semibold w-full '>Small World</p>
                             <div>
                                 <ChevronDown />
                             </div>
                         </div>
-                        <div className='w-[35rem]'>
+                        <div className='w-[30rem]'>
                             <Input
                                 prefix={<Search className="text-gray-400" size={16} />}
                                 placeholder=""
-                                className="w-full"
+                                className=""
                             />
                         </div>
                         <div className='flex'>
@@ -36,7 +36,7 @@ export const Header = () => {
                             </Button>
                             <div className="flex items-center gap-3 ml-4">
 
-                                <Avatar src="https://i.pravatar.cc/150?u=anna" size={40} />
+                                <Avatar src="https://i.pravatar.cc/150" size={40} />
 
                                 <div className='flex items-center w-[8rem]'>
                                     <div className="text-right">
@@ -56,7 +56,7 @@ export const Header = () => {
 
                 </AntHeader>
             </div>
-            <div className='ml-5 font-semibold'>
+            <div className='ml-12 font-semibold'>
                 <p>Staff > Overview</p>
             </div>
         </div>
