@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Table, Tag, Space, Button, Avatar, Tooltip } from 'antd';
-// import type { ColumnsType } from 'antd/es/table';
 import { MoreHorizontal, Edit2 } from 'lucide-react';
-// import type { StaffMember } from '../types/staff';
 
 const StaffTable = ({ data }) => {
+    const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+
+    const onSelectChange = (newSelectedRowKeys) => {
+        setSelectedRowKeys(newSelectedRowKeys);
+    };
+
+    const rowSelection = {
+        selectedRowKeys,
+        onChange: onSelectChange,
+    };
+
+    const itemRender = (_, type, originalElement) => {
+        if (type === 'prev') {
+            return <span>Previous</span>;
+        }
+        if (type === 'next') {
+            return <span>Next</span>;
+        }
+        return originalElement;
+    };
+
     const columns = [
         {
             title: 'Staff Name',
@@ -79,15 +98,19 @@ const StaffTable = ({ data }) => {
 
     return (
         <Table
+            rowSelection={rowSelection}
             columns={columns}
             dataSource={data}
             rowKey="id"
             pagination={{
                 total: data.length,
-                pageSize: 8,
+                pageSize: 20,
                 showSizeChanger: false,
-                showQuickJumper: true,
+                itemRender: itemRender,
+                showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} Staff`,
+                style: { display: 'flex', justifyContent: 'center', alignItems: 'center' }
             }}
+
         />
     );
 };

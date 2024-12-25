@@ -37,19 +37,52 @@ const mockData = [
             }
         },
         phoneNumber: '(986) 027-1627'
+    },
+    {
+        id: '3',
+        name: 'Natasha ',
+        avatar: 'https://i.pravatar.cc/150?u=natasha',
+        classrooms: [
+            { name: '2-Yellow-C', code: 'YC', additions: ['1'] }
+        ],
+        designation: 'Assistant Teacher',
+        schedule: {
+            days: ['Mon', 'Wed', 'Fri'],
+            customSchedule: {
+                day: 'Wednesday',
+                time: '07:30 AM - 5:30 PM'
+            }
+        },
+        phoneNumber: '(986) 027-1627'
+    },
+    {
+        id: '4',
+        name: 'Billie White',
+        avatar: 'https://i.pravatar.cc/150',
+        classrooms: [
+            { name: '2-Yellow-C', code: 'YC', additions: ['1'] }
+        ],
+        designation: 'Lead Teacher',
+        schedule: {
+            days: ['Mon', 'Wed', 'Fri'],
+            customSchedule: {
+                day: 'Wednesday',
+                time: '07:30 AM - 5:30 PM'
+            }
+        },
+        phoneNumber: '(986) 027-1627'
     }
+
 ];
 
 const StaffContent = () => {
     return (
         <Content className="p-6 bg-gray-50">
+
             <Card className="w-full">
                 <div className='flex justify-between items-center'>
                     <div className="flex justify-between items-center mb-6">
-                        {/* <div>
-                        <Title level={4} className="mb-0">Staff</Title>
-                        <div className="text-gray-500">Overview</div>
-                    </div> */}
+
                         <div className="flex gap-10 rounded-lg border p-5 items-center ">
                             <div className="text-sm">
                                 Total Staff
